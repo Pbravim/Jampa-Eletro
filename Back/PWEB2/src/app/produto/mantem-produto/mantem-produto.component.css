@@ -1,0 +1,42 @@
+.background {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-cadastro {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-cadastro mat-card-content {
+  padding: 16px;
+}
+
+.card-cadastro mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.card-cadastro mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+  background-color: #f1f1f1;
+}
+
+.card-cadastro mat-card-actions button {
+  margin-left: 8px;
+}
+
+body {
+  background-color: #333;
+  color: #ccc;
+}

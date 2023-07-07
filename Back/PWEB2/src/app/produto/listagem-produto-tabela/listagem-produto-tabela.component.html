@@ -1,0 +1,42 @@
+<mat-form-field>
+  <mat-label>Filtro</mat-label>
+  <input matInput placeholder="Filtro" (keyup)="filtrar(inputFiltro.value)" #inputFiltro>
+</mat-form-field>
+
+<mat-table [dataSource]="produtos">
+
+  <mat-header-row *matHeaderRowDef="colunas"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: colunas"></mat-row>
+
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.id}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <mat-header-cell *matHeaderCellDef>Nome</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.nome}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="estoque">
+    <mat-header-cell *matHeaderCellDef>Estoque</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{ item.estoque }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="preco">
+    <mat-header-cell *matHeaderCellDef>Preço</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.preco}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="acoes">
+    <mat-header-cell *matHeaderCellDef>Ações</mat-header-cell>
+    <mat-cell *matCellDef="let item">
+      <button mat-icon-button [routerLink]="['/editarproduto', item.id]">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button (click)="apagar(item.id)">
+        <mat-icon >delete</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+</mat-table>

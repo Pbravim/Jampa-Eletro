@@ -1,0 +1,30 @@
+<mat-card class="card-cadastro" [formGroup]="produtoForm">
+  <mat-card-content>
+    <mat-form-field appearance="fill">
+      <input matInput formControlName="nome" placeholder="Digite o nome">
+      <mat-error *ngIf="produtoForm?.get('nome')?.errors && produtoForm?.get('nome')?.touched">
+        O nome é obrigatório.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput formControlName="preco" placeholder="Digite o preço">
+      <mat-error *ngIf="produtoForm?.get('preco')?.errors && produtoForm?.get('preco')?.touched">
+        O preço é obrigatório e deve ser um número com até 2 casas decimais.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput formControlName="estoque" placeholder="Digite o estoque">
+      <mat-error *ngIf="produtoForm?.get('estoque')?.errors && produtoForm?.get('estoque')?.touched">
+        O estoque é obrigatório e deve ser um número maior que 0 e menor ou igual a 999.
+      </mat-error>
+    </mat-form-field>
+  </mat-card-content>
+
+  <mat-card-actions *ngIf="novoCadastro">
+    <button mat-raised-button color="primary" (click)="inserir()">{{nomeBotaoManutencao}}</button>
+  </mat-card-actions>
+
+  <mat-card-actions *ngIf="!novoCadastro">
+    <button mat-raised-button color="primary" (click)="atualizar()">{{nomeBotaoManutencao}}</button>
+  </mat-card-actions>
+</mat-card>

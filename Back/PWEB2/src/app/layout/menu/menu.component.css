@@ -1,0 +1,18 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.logo-link {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.logo-link:hover {
+  transform:scale(1.5%) ;
+}

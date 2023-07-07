@@ -1,0 +1,11 @@
+<div class="menu">
+  <div class="logo">
+    <a class="logo-link" routerLink="" >Eletro Jampa</a>
+  </div>
+  <button color="success" mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button [routerLink]="['cadastroproduto']" mat-menu-item>Cadastrar Produto</button>
+    <button [routerLink]="['estoque']" mat-menu-item>Estoque</button>
+    <button [routerLink]="['estoquetabela']" mat-menu-item>Tabela Estoque</button>
+  </mat-menu>
+</div>

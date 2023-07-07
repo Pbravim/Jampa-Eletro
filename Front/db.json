@@ -1,0 +1,22 @@
+{
+  "produtos": [
+    {
+      "nome": "Oi",
+      "estoque": "999",
+      "preco": "123",
+      "id": "mwbB_Pj"
+    },
+    {
+      "nome": "Lap",
+      "id": "xobjxM1",
+      "estoque": "66666",
+      "preco": "123"
+    },
+    {
+      "nome": "123",
+      "id": "eciTxPw",
+      "estoque": "0123",
+      "preco": "0123"
+    }
+  ]
+}
